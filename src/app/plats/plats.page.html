@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>plats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-row >
+    <ion-col *ngFor="let item of list" sizeLg="6" sizeSm="6" sizeXl="3" sizeMd="4" sizeXs="6">
+      <ion-card style="background-color:#fff;">
+        <ion-card-content [ngStyle]="{'background-image': 'url('+ item.picUrl +')'}" style=" 
+      height: 200px; 
+      max-width: 100%; 
+      background-position: center;
+      background-repeat : no-repeat;
+      background-size: cover;">
+          <ion-badge color="primary" mode="ios" style="font-family: cairo; font-size: large;"> {{item.itPrice}}.00 ر.س
+          </ion-badge>
+        </ion-card-content>
+        <ion-card-title style="font-weight: bold; font-size: 1rem; color: black; font-family:cairo;text-align: center;">
+          {{item.itName}}
+        </ion-card-title>
+        <ion-button  expand='block'>
+          <ion-icon style="font-size: larger;font-family:cairo;margin-right: 15px;" name="basket-outline"></ion-icon>
+          <span style="font-family: cairo; font-weight: bold;">          اضف الى السلة 
+          </span>
+        </ion-button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+
+
+
+
+
+
+
+</ion-content>

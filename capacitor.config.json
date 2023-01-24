@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "apap-menu",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

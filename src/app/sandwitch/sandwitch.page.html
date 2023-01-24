@@ -1,0 +1,241 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>سندويتشات</ion-title>
+
+
+    <ion-item slot="end" >
+       
+      <ion-badge   style="font-family: cairo" > ر.س</ion-badge>
+      <ion-icon style="font-size: x-large;color:#c2212a" name="basket-outline">  </ion-icon>   
+    </ion-item>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content dir="rtl">
+  
+
+
+  <ion-row >
+    <ion-col *ngFor="let item of products" sizeLg="6" sizeSm="6" sizeXl="3" sizeMd="4" sizeXs="6">
+      <ion-card style="background-color:#fff;">
+        <ion-card-content [ngStyle]="{'background-image': 'url('+ item.picUrl +')'}" style=" 
+      height: 200px; 
+      max-width: 100%; 
+      background-position: center;
+      background-repeat : no-repeat;
+      background-size: cover;">
+          <ion-badge color="primary" mode="ios" style="font-family: cairo; font-size: large;"> {{item.price}}.00 ر.س
+          </ion-badge>
+        </ion-card-content>
+        <ion-card-title style="font-weight: bold; font-size: 1rem; color: black; font-family:cairo;text-align: center;">
+          {{item.itName}}
+          </ion-card-title>
+       
+        <ion-button  expand='block' (click)="addCart(item)">
+          <ion-icon style="font-size: larger;font-family:cairo;margin-right: 15px;" name="basket-outline"></ion-icon>
+          <span style="font-family: cairo; font-weight: bold;">          اضف الى السلة 
+          </span>
+        </ion-button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+<!--
+  <ion-row >
+    <ion-col  sizeLg="6" sizeSm="6" sizeXl="3" sizeMd="4" sizeXs="6">
+      <ion-card style="background-color:#fff;">
+        <ion-card-content [ngStyle]="{'background-image':'assets/icon/sandwich'}" style=" 
+      height: 200px; 
+      max-width: 100%; 
+      background-position: center;
+      background-repeat : no-repeat;
+      background-size: cover;">
+          <ion-badge color="primary" mode="ios" style="font-family: cairo; font-size: large;"> 13.00 ر.س
+          </ion-badge>
+        </ion-card-content>
+        <ion-card-title style="font-weight: bold; font-size: 1rem; color: black; font-family:cairo;text-align: center;">
+          كبدة إسكندراني
+        </ion-card-title>
+        <ion-button (click)="addToBasket(item)" expand='block'>
+          <ion-icon style="font-size: larger;font-family:cairo;margin-right: 15px;" name="basket-outline"></ion-icon>
+          <span style="font-family: cairo; font-weight: bold;">          اضف الى السلة 
+          </span>
+        </ion-button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+
+
+
+
+-->
+
+
+
+<!--
+  <ion-card style="background-color:#fff;">
+
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+      height: 200px; 
+      max-width: 100%; 
+      background-position: center;
+      background-repeat : no-repeat;
+      background-size: cover;"/>
+      <ion-card-header>
+        <ion-card-title>كبدة إسكندراني</ion-card-title>
+   
+      </ion-card-header>
+    
+      <ion-card-content>
+        13 ر.س
+      </ion-card-content>
+    </ion-card>
+
+            <ion-card style="background-color:#fff;">
+        
+                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                height: 200px; 
+                max-width: 100%; 
+                background-position: center;
+                background-repeat : no-repeat;
+                background-size: cover;"/>  
+                <ion-card-header>
+                  <ion-card-title>كبده مقليه بالرده</ion-card-title>
+             
+                </ion-card-header>
+              
+                <ion-card-content>
+                  14 ر.س
+                </ion-card-content>
+              </ion-card>
+
+
+
+              <ion-card style="background-color:#fff;">
+              
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                  height: 200px; 
+                  max-width: 100%; 
+                  background-position: center;
+                  background-repeat : no-repeat;
+                  background-size: cover;"/> 
+                  <ion-card-header>
+                    <ion-card-title>              سجق اسكندرانى
+                    </ion-card-title>
+               
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    16 ر.س
+                  </ion-card-content>
+                </ion-card>
+
+
+                <ion-card style="background-color:#fff;">
+               
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                    height: 200px; 
+                    max-width: 100%; 
+                    background-position: center;
+                    background-repeat : no-repeat;
+                    background-size: cover;" />
+                    <ion-card-header>
+                      <ion-card-title>             كفتة
+                      </ion-card-title>
+                 
+                    </ion-card-header>
+                  
+                    <ion-card-content>
+                      16 ر.س
+                    </ion-card-content>
+                  </ion-card>
+                  
+              <ion-card style="background-color:#fff;">
+      
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"  style=" 
+                  height: 200px; 
+                  max-width: 100%; 
+                  background-position: center;
+                  background-repeat : no-repeat;
+                  background-size: cover;"/>
+                  <ion-card-header>
+                    <ion-card-title>              كباب
+                    </ion-card-title>
+               
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    18 ر.س
+                  </ion-card-content>
+                </ion-card>
+                
+              <ion-card style="background-color:#fff;">
+          
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                  height: 200px; 
+                  max-width: 100%; 
+                  background-position: center;
+                  background-repeat : no-repeat;
+                  background-size: cover;" />
+                  <ion-card-header>
+                    <ion-card-title>              طرب
+                    </ion-card-title>
+               
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    18 ر.س
+                  </ion-card-content>
+                </ion-card>
+                
+              <ion-card style="background-color:#fff;" >
+        
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                  height: 200px; 
+                  max-width: 100%; 
+                  background-position: center;
+                  background-repeat : no-repeat;
+                  background-size: cover;" />
+                  <ion-card-header>
+                    <ion-card-title>              شيش طاووك
+                    </ion-card-title>
+               
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    14 ر.س
+                  </ion-card-content>
+                </ion-card>
+             
+                
+
+
+
+                  <ion-card style="background-color:#fff;">
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style=" 
+                    height: 200px; 
+                    max-width: 100%; 
+                    background-position: center;
+                    background-repeat : no-repeat;
+                    background-size: cover;" />
+                    <ion-card-header>
+                      <ion-card-title>                             فاهيتا
+
+                      </ion-card-title>
+                 
+                    </ion-card-header>
+                  
+                    <ion-card-content>
+                      15 ر.س
+                    </ion-card-content>
+                  </ion-card>
+
+
+                -->
+</ion-content>

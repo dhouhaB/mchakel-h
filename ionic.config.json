@@ -1,0 +1,7 @@
+{
+  "name": "apap-menu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
